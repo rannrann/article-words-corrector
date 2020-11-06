@@ -9,13 +9,14 @@ def extract_sentence():
     with open('text', 'r') as f:
         for line in f.readlines():
             list.append(line)
-    print(list)
     return list
 
 def main():
     root=TireTree()
     list = extract_sentence()
     root.add(list)
+    root.load_words()
+    print(len(root.words))
 
 
 
