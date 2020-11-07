@@ -1,8 +1,9 @@
-from TireTree import TireTree,TireNode
+from WordCorrector import TireTree,WordCorrector
 
 
-def corrector():
-    pass
+def corrector(words):
+    wc = WordCorrector(words,'big.txt')
+    return wc.correction()
 
 def extract_sentence():
     list = []
@@ -15,8 +16,10 @@ def main():
     root=TireTree()
     list = extract_sentence()
     root.add(list)
-    root.load_words()
-    print(len(root.words))
+    original_words=root.load_words()
+    print(original_words)
+    print(len(original_words))
+    #print(corrector(original_words))
 
 
 
