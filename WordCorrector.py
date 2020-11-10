@@ -8,6 +8,7 @@ class TireNode():
         self.isRectify=False
         self.next=[None]*26
         self.layer=layer
+        self.lines=[]
 
 
 class TireTree():
@@ -46,13 +47,16 @@ class TireTree():
     def load_one_word(self,start):
         if start.isWord == True:
             TireTree.words.append(''.join(TireTree.word))
-            TireTree.word = [TireTree.word[i] for i in range(0, start.layer)]
-
+        for i in range(0,len(start.next)):
+            if start.next[i]:
+                break
+            if i==len(start.next):
+                return
 
         for i in range(0,26):
             if start.next[i] != None:
                 if start.layer<len(TireTree.word):
-                    TireTree.word=[]
+                    TireTree.word = [TireTree.word[i] for i in range(0, start.layer)]
                 TireTree.word.append(chr(97+i))
                 TireTree.load_one_word(self,start.next[i])
 
@@ -62,21 +66,23 @@ class TireTree():
 
 
 class WordCorrector:
-    def __init__(self,words,dir):
+    words_counter = None
+    text = open('big.txt').read()
+    def __init__(self,words):
         self.original_words=words
-        self.dir = dir
-        self.text = open(dir).read()
-        self.words_counter=None
-    def generate_words_counter(self):
-        self.words_counter=Counter(re.findall(r'\w+',self.text.lower()))
-        if self.words_counter:
+
+    @classmethod
+    def generate_words_counter(cls):
+        cls.words_counter=Counter(re.findall(r'\w+',cls.text.lower()))
+        if cls.words_counter:
             return True
         else:
             return False
-    def known(self,word):
-        return set(w for w in word if w in self.words_counter)
 
-    def edits1(self,word):
+    def known(words):
+        return set(w for w in words if w in WordCorrector.words_counter)
+
+    def edits1(word):
         letters = 'abcdefghijklmnopqrstuvwxyz'
         splits = [(word[:i], word[i:]) for i in range(len(word) + 1)]
         deletes = [L + R[1:] for L, R in splits if R]
@@ -85,23 +91,21 @@ class WordCorrector:
         inserts = [L + c + R for L, R in splits for c in letters]
         return set(deletes + transposes + replaces + inserts)
 
-    def edits2(self,word):
+    def edits2(word):
         return (e2 for e1 in WordCorrector.edits1(word) for e2 in WordCorrector.edits1(e1))
 
     def candidates(word):
-        return (WordCorrector.known([word]) or WordCorrector.known(WordCorrector.edits1(word)) or WordCorrector.known(WordCorrector.edits2(word)) or [word])
+        return ( WordCorrector.known([word]) or WordCorrector.edits1(word) or WordCorrector.edits2(word) or [word])
 
-    def P(self,word):
-        N = sum(self.words_counter.values())
-        return self.words_counter[word] / N
+    @classmethod
+    def P(cls,word):
+        N = sum(cls.words_counter.values())
+        return cls.words_counter[word] / N
 
     def correction(self):
-        if WordCorrector.generate_words_counter(self):
-            ret={}
-            for word in self.original_words:
-                new_word=max(WordCorrector.candidates(word), key=WordCorrector.P)
-                if new_word != word:
-                    ret[word]=new_word
-            return ret
-        else:
-            return "The words counter can't be generated."
+        ret = {}
+        for word in self.original_words:
+            new_word = max(WordCorrector.candidates(word), key=WordCorrector.P)
+            if new_word != word:
+                ret[word] = new_word
+        return ret

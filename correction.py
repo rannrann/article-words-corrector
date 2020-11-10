@@ -20,13 +20,12 @@ def correction(word):
 
 def candidates(word):
     "Generate possible spelling corrections for word."
+    print(word)
     return (known([word]) or known(edits1(word)) or known(edits2(word)) or [word])
 
 
 def known(words):
     "The subset of `words` that appear in the dictionary of WORDS."
-    out =  set(w for w in words if w in WORDS)
-    #print(out)
     return set(w for w in words if w in WORDS)
 
 
@@ -46,5 +45,5 @@ def edits2(word):
     return (e2 for e1 in edits1(word) for e2 in edits1(e1))
 
 if __name__ == "__main__":
-    print('apple'==correction('apple'))
-    print(len(correction('appll')))
+    print(edits1('a'))
+    print(correction('a'))

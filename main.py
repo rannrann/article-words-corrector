@@ -2,8 +2,12 @@ from WordCorrector import TireTree,WordCorrector
 
 
 def corrector(words):
-    wc = WordCorrector(words,'big.txt')
-    return wc.correction()
+    if not WordCorrector.generate_words_counter():
+        print("The words counter can't be generated.")
+        return
+    else:
+        wc = WordCorrector(words)
+        return wc.correction()
 
 def extract_sentence():
     list = []
@@ -17,9 +21,7 @@ def main():
     list = extract_sentence()
     root.add(list)
     original_words=root.load_words()
-    print(original_words)
-    print(len(original_words))
-    #print(corrector(original_words))
+    print(corrector(original_words))
 
 
 
