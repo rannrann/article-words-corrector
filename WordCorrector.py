@@ -12,8 +12,8 @@ class TireNode():
 
 
 class TireTree():
-    words=[]
-    word=[]
+    words=[] #all words in TireTree
+    word=[] #letter
     def __init__(self):
         self.root=TireNode(0)
 
@@ -21,10 +21,17 @@ class TireTree():
     def extract_words(list):
         rlist=[]
         for line in list:
-            matchobj = re.findall(r'[a-zA-Z][a-zA-Z]+[\sa-z\s]*', str(line).lower())
+            matchobj = re.findall(r'([a-zA-Z][a-zA-Z]+[\sa-z\s]*).*\((.*)\)', str(line).lower())
             if(matchobj):
+                tmp = ''
+                for group in matchobj[0]:
+                    tmp += group
+                matchobj = [tmp]
                 matchobj= [i.strip() for i in matchobj]
+                matchobj.append(matchobj[0][-1:])
+                matchobj[0]=matchobj[0][0:-1]
                 rlist.append(matchobj)
+                print(matchobj)
 
         for i in range(0,len(rlist)):
             rlist[i]=rlist[i][0].split()
@@ -47,6 +54,7 @@ class TireTree():
     def load_one_word(self,start):
         if start.isWord == True:
             TireTree.words.append(''.join(TireTree.word))
+        #the loop needs to be optimized
         for i in range(0,len(start.next)):
             if start.next[i]:
                 break

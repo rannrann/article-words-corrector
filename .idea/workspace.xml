@@ -4,8 +4,8 @@
     <list default="true" id="ce2986cc-d3d9-430c-be00-59a79c38f5ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WordCorrector.py" beforeDir="false" afterPath="$PROJECT_DIR$/WordCorrector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/correction.py" beforeDir="false" afterPath="$PROJECT_DIR$/correction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text" beforeDir="false" afterPath="$PROJECT_DIR$/text" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,38 +17,40 @@
     <session id="1416369336">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.17" value="2" />
-          <entry key="project.open.time.18" value="1" />
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.17" value="4" />
+          <entry key="project.open.time.170" value="1" />
+          <entry key="project.open.time.18" value="2" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.21" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="4" />
+          <entry key="py" value="8" />
           <entry key="test" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="4" />
+          <entry key="Python" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="28" />
-          <entry key="py" value="4963" />
-          <entry key="text" value="4" />
+          <entry key="py" value="5877" />
+          <entry key="text" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="32" />
-          <entry key="Python" value="4963" />
+          <entry key="PLAIN_TEXT" value="35" />
+          <entry key="Python" value="5877" />
         </counts>
       </usages-collector>
     </session>
@@ -58,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/text">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+            <state>
+              <caret selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -67,17 +69,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WordCorrector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="243">
+              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1605039192062" expanded="true" signature="61:202" ph="..." />
-                <marker date="1605039192062" expanded="true" signature="244:245" ph="..." />
-                <marker date="1605039192062" expanded="true" signature="244:300" ph="..." />
-                <marker date="1605039192062" expanded="true" signature="1965:1970" ph="..." />
-                <marker date="1605039192062" expanded="true" signature="2367:2938" ph="..." />
-                <marker date="1605039192062" expanded="true" signature="2964:3081" ph="..." />
+                <marker date="1606983067053" expanded="true" signature="61:224" ph="..." />
+                <marker date="1606983067053" expanded="true" signature="297:298" ph="..." />
+                <marker date="1606983067053" expanded="true" signature="297:353" ph="..." />
+                <marker date="1606983067053" expanded="true" signature="2315:2320" ph="..." />
+                <marker date="1606983067053" expanded="true" signature="2717:3288" ph="..." />
+                <marker date="1606983067053" expanded="true" signature="3314:3431" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/try.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -85,12 +96,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+            <state relative-caret-position="135">
+              <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
               <folding>
-                <marker date="1605039192400" expanded="true" signature="49:51" ph="..." />
-                <marker date="1605039192400" expanded="true" signature="203:212" ph="..." />
-                <marker date="1605039192400" expanded="true" signature="203:270" ph="..." />
+                <marker date="1606981769197" expanded="true" signature="49:51" ph="..." />
+                <marker date="1606981769197" expanded="true" signature="203:212" ph="..." />
               </folding>
             </state>
           </provider>
@@ -122,13 +132,14 @@
         <option value="$PROJECT_DIR$/correction.py" />
         <option value="$PROJECT_DIR$/text" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/try.py" />
         <option value="$PROJECT_DIR$/WordCorrector.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="732" />
-    <option name="y" value="16" />
+    <option name="x" value="613" />
+    <option name="y" value="31" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -138,6 +149,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,7 +161,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -255,17 +266,40 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="try" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="article_words_corrector" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/try.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.main" />
       <item itemvalue="Python.TireTree" />
       <item itemvalue="Python.correction" />
       <item itemvalue="Python.WordCorrector" />
+      <item itemvalue="Python.try" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.correction" />
+        <item itemvalue="Python.try" />
         <item itemvalue="Python.WordCorrector" />
+        <item itemvalue="Python.correction" />
         <item itemvalue="Python.TireTree" />
       </list>
     </recent_temporary>
@@ -287,18 +321,18 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49753696" weight="0.3296131" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49753696" visible="true" weight="0.100446425" />
       <window_info id="Structure" order="1" sideWeight="0.50246304" side_tool="true" weight="0.3296131" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32512316" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.03776683" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39901477" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3262295" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32019705" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -310,47 +344,57 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/text">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/correction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
           <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        <state relative-caret-position="135">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
           <folding>
-            <marker date="1605039192400" expanded="true" signature="49:51" ph="..." />
-            <marker date="1605039192400" expanded="true" signature="203:212" ph="..." />
-            <marker date="1605039192400" expanded="true" signature="203:270" ph="..." />
+            <marker date="1606981769197" expanded="true" signature="49:51" ph="..." />
+            <marker date="1606981769197" expanded="true" signature="203:212" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/try.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WordCorrector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="243">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1605039192062" expanded="true" signature="61:202" ph="..." />
-            <marker date="1605039192062" expanded="true" signature="244:245" ph="..." />
-            <marker date="1605039192062" expanded="true" signature="244:300" ph="..." />
-            <marker date="1605039192062" expanded="true" signature="1965:1970" ph="..." />
-            <marker date="1605039192062" expanded="true" signature="2367:2938" ph="..." />
-            <marker date="1605039192062" expanded="true" signature="2964:3081" ph="..." />
+            <marker date="1606983067053" expanded="true" signature="61:224" ph="..." />
+            <marker date="1606983067053" expanded="true" signature="297:298" ph="..." />
+            <marker date="1606983067053" expanded="true" signature="297:353" ph="..." />
+            <marker date="1606983067053" expanded="true" signature="2315:2320" ph="..." />
+            <marker date="1606983067053" expanded="true" signature="2717:3288" ph="..." />
+            <marker date="1606983067053" expanded="true" signature="3314:3431" ph="..." />
           </folding>
         </state>
       </provider>
