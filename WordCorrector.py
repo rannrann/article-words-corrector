@@ -4,10 +4,8 @@ from collections import Counter
 
 class TireNode():
     def __init__(self,layer):
-        self.isWord=False
-        self.isRectify=False
         self.next=[None]*26
-        self.layer=layer
+        self.layer=layer # used in load_one_word function
         self.lines=[]
 
 
@@ -31,16 +29,12 @@ class TireTree():
                 matchobj.append(matchobj[0][-1:])
                 matchobj[0]=matchobj[0][0:-1]
                 rlist.append(matchobj)
-                print(matchobj)
-
-        for i in range(0,len(rlist)):
-            rlist[i]=rlist[i][0].split()
         return rlist
 
     def add(self,list):
         lines = TireTree.extract_words(list)
         for line in lines:
-            for word in line:
+            for word in line[0].split():
                 step = self.root
                 current_layer=0
                 for letter in word:
@@ -49,16 +43,16 @@ class TireTree():
                     if step.next[index] == None:
                         step.next[index]=TireNode(current_layer)
                     step = step.next[index]
-                step.isWord=True
+                step.lines.append(line[1])
 
     def load_one_word(self,start):
-        if start.isWord == True:
+        if start.lines:
             TireTree.words.append(''.join(TireTree.word))
         #the loop needs to be optimized
         for i in range(0,len(start.next)):
-            if start.next[i]:
+            if start.next[i]:# if there is any letter after the 'start' letter
                 break
-            if i==len(start.next):
+            if i==len(start.next)-1: #there is no letter after the 'start' letter
                 return
 
         for i in range(0,26):
@@ -72,6 +66,26 @@ class TireTree():
         TireTree.load_one_word(self,self.root)
         return TireTree.words
 
+    def get_lines(self,word):
+        step=self.root
+        for letter in word:
+            index = ord(letter) - ord('a')
+            step=step.next[index]
+        return step.lines
+
+    def rectify(self,rectified_word,original_text):
+        if len(rectified_word)==0:
+            return None
+        else:
+            word_location={}
+            for wrong_word,correct_word in rectified_word.items():
+                word_location[wrong_word]=[int(i) for i in self.get_lines(wrong_word)]
+            # print(word_location)
+            #有没有考虑过同一错误单词在同一行出现多次这种情况
+            for wrong_word,location in word_location.items():
+                for time in location:
+                    original_text[time]=original_text[time].replace(wrong_word,rectified_word[wrong_word])
+            return original_text
 
 class WordCorrector:
     words_counter = None
