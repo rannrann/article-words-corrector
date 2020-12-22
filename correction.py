@@ -45,5 +45,6 @@ def edits2(word):
     return (e2 for e1 in edits1(word) for e2 in edits1(e1))
 
 if __name__ == "__main__":
-    print(edits1('a'))
-    print(correction('a'))
+    print(correction('smoothie'))
+
+

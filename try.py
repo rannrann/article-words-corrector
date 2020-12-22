@@ -1,6 +1,5 @@
 import re
-str="[01:45.00]B She is ready across the robd.(4)\n"
+str="there are books neatly 111-2223 arranged on top of desk18"
 
-obj = re.findall(r'\(.*\)',str)
-str=str.replace(obj[0],'')
-print(str)
+obj = re.findall(r'[0-9]*$',str)
+print(obj)

@@ -25,9 +25,13 @@ class TireTree():
                 for group in matchobj[0]:
                     tmp += group
                 matchobj = [tmp]
+
                 matchobj= [i.strip() for i in matchobj]
-                matchobj.append(matchobj[0][-1:])
-                matchobj[0]=matchobj[0][0:-1]
+                #print(matchobj)
+                row = re.findall(r'[0-9]*$', matchobj[0])
+                row = row[0]
+                matchobj.append(row)
+                matchobj[0]=matchobj[0].replace(row,'')
                 rlist.append(matchobj)
         return rlist
 
@@ -85,6 +89,9 @@ class TireTree():
             for wrong_word,location in word_location.items():
                 for time in location:
                     original_text[time]=original_text[time].replace(wrong_word,rectified_word[wrong_word])
+            for i in range(0,len(original_text)):# 注意：使用for i in original_text是不行的
+                temp = re.findall(r'\(.*\)',original_text[i])
+                original_text[i] = original_text[i].replace(temp[0],'')
             return original_text
 
 class WordCorrector:
@@ -117,7 +124,7 @@ class WordCorrector:
         return (e2 for e1 in WordCorrector.edits1(word) for e2 in WordCorrector.edits1(e1))
 
     def candidates(word):
-        return ( WordCorrector.known([word]) or WordCorrector.edits1(word) or WordCorrector.edits2(word) or [word])
+        return ( WordCorrector.known([word]) or WordCorrector.known(WordCorrector.edits1(word)) or WordCorrector.known(WordCorrector.edits2(word)) or [word])
 
     @classmethod
     def P(cls,word):
